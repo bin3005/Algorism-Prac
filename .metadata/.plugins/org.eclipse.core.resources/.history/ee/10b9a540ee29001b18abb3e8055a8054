@@ -1,0 +1,23 @@
+
+public class qwe {
+
+	public static void main(String[] args) {
+		String str = "he llo w";
+		String str2="";
+		
+		for(int i = 0 ; i < str.length() ; i ++) {
+			if(str.charAt(i) == ' ') {
+				
+				str2 += str.substring(i+1,i+2);
+				i+=1;
+			}else {
+				str2 += str.substring(i,i+1);
+				
+			}
+			
+			
+		}
+		
+	}
+
+}

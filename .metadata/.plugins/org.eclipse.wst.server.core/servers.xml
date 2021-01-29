@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" secure="false" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="153">
+    <list key="modules" value0="Jsp01_MyBoard2_Mybatis::org.eclipse.jst.jee.server:Jsp01_MyBoard2_Mybatis::jst.web::4.0" value1="Jsp02_MultiDelete_MyBatis::org.eclipse.jst.jee.server:Jsp02_MultiDelete_MyBatis::jst.web::4.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Spring-config" deployDir="wtpwebapps" hostname="localhost" id="Spring" name="Spring" runtime-id="Spring" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="25">
+    <list key="modules" value0="NodeTest::org.eclipse.jst.jee.server:NodeTest::jst.web::2.5" value1="Spring7_HelloMVC::org.eclipse.jst.jee.server:Spring7_HelloMVC::jst.web::4.0" value2="SpringMVC2_filter2_aop::org.eclipse.jst.jee.server:SpringMVC2_filter2_aop::jst.web::2.5"/>
+  </server>
+</servers>

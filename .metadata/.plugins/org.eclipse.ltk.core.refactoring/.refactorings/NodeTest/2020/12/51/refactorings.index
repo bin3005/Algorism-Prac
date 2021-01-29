@@ -1,0 +1,8 @@
+1607933511722	Rename resource 'root-context.xml'
+1607933514592	Move 'applicationContext.xml' to 'appServlet'
+1607933708693	Copy file
+1607935138073	Move 'root-context.xml' to 'appServlet'
+1607935544041	Move 'index.jsp' to 'webapp'
+1607936403422	Move 'index.jsp' to 'appServlet'
+1607936406024	Move 'index.jsp' to 'views'
+1607936431746	Move 'index.jsp' to 'webapp'

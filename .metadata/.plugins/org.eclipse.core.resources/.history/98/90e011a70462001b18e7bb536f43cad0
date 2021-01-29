@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+import javax.swing.text.StyledEditorKit.BoldAction;
+
+public class Greedy2839 {
+
+	public static void main(String[] args) {
+		//N키로그램 설탕 배달
+		//봉지는 3키로와 5키로
+		// 3 <= N <= 5000
+		Scanner in = new Scanner(System.in);
+		
+		int smallSugar = 3;
+		int bigSugar = 5;
+		int boxNum = 0; int bigNum,smallNum;
+		boolean stop = false;
+		int n = in.nextInt();
+		
+		bigNum = n / bigSugar;
+		boxNum = (n % bigSugar) == 0 ? n/ bigSugar : 0;
+		
+		if(boxNum == 0 ) {
+			for( int i = bigNum ; i > 0 ; i--) {
+				smallNum = ( n - i * bigSugar) % smallSugar == 0 ? ( n - i * bigSugar)/smallSugar : 0 ;
+				if( smallNum != 0 && smallNum+i < boxNum) {
+					boxNum = smallNum+i;
+					stop = true;
+				}
+				if(stop == true) {
+					break;
+					
+				}
+			}
+		}
+		
+		
+		if(boxNum == 0 ) {
+			boxNum = -1;
+		}
+		
+		System.out.println(boxNum);
+	}
+
+}

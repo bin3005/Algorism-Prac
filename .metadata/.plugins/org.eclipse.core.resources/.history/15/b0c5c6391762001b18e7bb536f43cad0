@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BinarySearch10815 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int num1 = in.nextInt();
+		ArrayList<Integer> card = new ArrayList<Integer>();
+		
+		for(int i = 0; i < num1 ; i++) {
+			card.add(in.nextInt());
+		}
+		
+		int num2 = in.nextInt();
+		ArrayList<Integer> find = new ArrayList<Integer>();
+		
+		for(int i = 0; i < num2 ; i++) {
+			find.add(in.nextInt());
+		}
+		
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		for(int i = 0 ; i < find.size(); i++) {
+			result.add(0);
+		}
+		
+		
+		for(int i = 0; i < find.size();i++) {
+			for(int j = 0; j < card.size(); j++) {
+				if(card.get(j) == find.get(i)) {
+					result.set(i, 1);
+				}
+			}
+		}
+		
+	}
+
+}

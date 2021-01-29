@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.my.multi">
+	<select id="selectAll" resultType="MDBoardDto">
+		SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE
+		FROM MDBOARD
+	</select>  	
+	
+	<!-- 
+	<resultMap type="MDBoardDto" id="MDBoardMap">
+  		<result property ="seq" column="SEQ"></result>
+  		<result property ="writer" column="WRITER"></result>
+  		<result property ="title" column="TITLE"></result>
+  		<result property ="content" column="CONTENT"></result>
+  		<result property ="regdate" column="REGDATE"></result>
+  	</resultMap>
+  	
+	
+	 selectone을 실행할 쿼리문 작성* 주의할 점 : 넘어오는 seq처리 
+		resultMap으로 처리
+	<select id="selectOne" parameterType="int" resultMap="MDBoardDto" >
+		SELECT *
+		FROM MDBOARD
+		WHERE SEQ = #{seq}
+	</select>
+	 -->
+  </mapper>

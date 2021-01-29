@@ -1,0 +1,6 @@
+package com.multi.dao;
+
+public class SqlMapConfig {
+	private SqlSessionFactory sqlSessionFactory;
+	
+}

@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Greedy11047 {
+	//µ¿Àü
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int coinNum = in.nextInt();
+		int goalMoney = in.nextInt();
+		ArrayList<Integer> priceList = new ArrayList<>();
+		
+		for(int i = 0 ; i < coinNum; i++) {
+			priceList.add(in.nextInt());
+		}
+		
+		while(true) {
+			int index = priceList.size()-1;
+			
+			if( goalMoney/ priceList.get(index) > 0) {
+				coinNum += goalMoney/ priceList.get(index);
+				goalMoney = goalMoney % priceList.get(index);
+			}
+			
+			index--;
+			
+			if(index < 0 ) {
+				break;
+			}else if(goalMoney == 0) {
+				break;
+			}
+		}
+		
+		System.out.println(coinNum);
+	}
+
+}

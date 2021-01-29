@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.my.myboard">
+  
+  	<resultMap type="com.my.dto.MyBoardDto" id="MyBoardMap">
+  		<result property ="myNO" column="MYNO"></result>
+  		<result property ="myName" column="MYNAME"></result>
+  		<result property ="myTitle" column="MYTITLE"></result>
+  		<result property ="myContent" column="MYCONTENT"></result>
+  		<result property ="myDate" column="MYDATE"></result>
+  	</resultMap>
+  
+  	<select id = "selectAll" resultMap="myBoardMap">
+  		SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE
+  		FROM MYBOARD
+  		ORDER BY MYNO DESC
+  	</select>
+  	
+  	<!--  dto변수명과 db변수명ㅇ ㅣ같을때
+  	<select id="selectOne" parameterType="int" resultType="MyBoardDto">
+  		SELECT *
+  		FROM MYBOARD
+  		WHERE MYNO = #{myno}
+  	</select>
+  	 -->
+  	 
+  	<select id="selectOne" parameterType="int" resultMap="myBoardMap">
+  		SELECT *
+  		FROM MYBOARD
+  		WHERE MYNO = #{myno}
+  	</select>
+  	
+  </mapper>

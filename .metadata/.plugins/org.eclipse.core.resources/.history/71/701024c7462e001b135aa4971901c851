@@ -1,0 +1,112 @@
+package com.multi.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.multi.dto.MDBoardDto;
+
+public class MDBoardDao extends SqlMapConfig{
+	private String namespace = "com.my.multi.";
+	//게시판 목록
+	public List<MDBoardDto> selectAll(){
+		List<MDBoardDto> res =null;
+		SqlSession session = null;
+		
+		try {
+			session = getSqlSessionFactory().openSession(true);
+			res = session.selectList(namespace + "selectAll");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		
+		
+		return res;
+	}
+	
+	public MDBoardDto selectOne(int seq) {
+		MDBoardDto dto = null;
+		SqlSession session = null;
+		
+		session = getSqlSessionFactory().openSession(true);
+		dto = session.selectOne(namespace + "selectOne", seq);
+		
+		session.close();
+		
+		return dto;
+	}
+	
+	//insert
+	public int insert(MDBoardDto dto) {
+		int res = 0 ;
+		SqlSession session = null;
+		
+		session = getSqlSessionFactory().openSession(true);
+		res = session.insert(namespace+"insert",dto);
+		
+		session.close();
+		return res;
+	}
+	
+	//update
+	public int update(MDBoardDto dto) {
+		int res = 0 ;
+		SqlSession session = null;
+		
+		session = getSqlSessionFactory().openSession(true);
+		res = session.update(namespace+"update" , dto);
+		session.close();
+		return res;
+	}
+	
+	//delete
+	public int delete(int seq) {
+		int res = 0 ;
+		SqlSession session = null;
+		
+		session = getSqlSessionFactory().openSession(true);
+		res = session.delete(namespace+"delete",seq);
+		session.close();
+		return res;
+	}
+	
+	//multidelete 내가한방식
+	/*
+	public int multiDelete(String[] seq) {
+		Connection con = getConnection();
+		PreparedStatement pstm = null;
+		int res = 0;		
+		
+		String sql ="DELETE FROM MDBOARD WHERE SEQ = ? ";
+		try {
+			pstm = con.prepareStatement(sql);
+			for(int i = 0 ; i < seq.length ; i++) {
+				
+				pstm.setString(1, seq[i]);
+				pstm.executeUpdate();
+				res++;
+			}
+			
+			if( res == seq.length){
+				con.commit();
+				}
+			else{
+				con.rollback();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(con);
+			close(pstm);
+		}
+		return res;
+	}
+	*/
+	//multidelete 강사님이 한방식
+	public int multiDelete(String[] seq) {
+		
+		return 0;
+	}
+}

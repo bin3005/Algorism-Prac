@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.springsource.sts.wizard.template"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="188"/>
+			<item key="DIALOG_Y_ORIGIN" value="186"/>
+			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		</section>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+			<item value="C:\Users\bin90\git\PracSpring\Spring01_Hello"/>
+			<item value="C:\Users\bin90\Desktop\공학과\JavaUI\workspace04_web\Detamon"/>
+			<item value="C:\Users\bin90\Desktop\공학과\JavaUI\workspace04_web\Detamonjo1.0"/>
+			<item value="C:\Users\bin90\Desktop\공학과\JavaUI\workspace04_web\Detamonlee"/>
+			<item value="C:\Users\bin90\Desktop\공학과\JavaUI\workspace04_web\Detamonle"/>
+			<item value="C:\Users\bin90\Desktop\Detamon0.2.1\Detamon0.2.zip_expanded\Detamon2"/>
+			<item value="C:\Users\bin90\Desktop\Detamon0.2.1\Detamon0.2.zip_expanded"/>
+			<item value="C:\Users\bin90\Desktop\공학과\JavaUI\workspace04_web\Detamon1"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\bin90\Desktop\asd.zip"/>
+			<item value="C:\Users\bin90\Desktop\SpringMVC02.zip"/>
+			<item value="C:\Users\bin90\Desktop\aop.zip"/>
+			<item value="C:\Users\bin90\Desktop\Spring04.zip"/>
+			<item value="C:\Users\bin90\Desktop\Spring03.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon6.1.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon5.6.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon5.5.zip"/>
+			<item value="C:\Users\bin90\Desktop\Detamon4.9.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon5.1.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon4.8.동희zip.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon4.9.성효zip.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon4.6.성효zip.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon3.9.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon4.1동희zip.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon3.8성효.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon3.5성효.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon3.3동희.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon3.0.동희zip.zip"/>
+			<item value="C:\Users\bin90\Desktop\SEMI\프로젝트모음\Detamon2.7성효.zip"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="581"/>
+		<item key="DIALOG_HEIGHT" value="432"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="609"/>
+		<item key="DIALOG_Y_ORIGIN" value="274"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

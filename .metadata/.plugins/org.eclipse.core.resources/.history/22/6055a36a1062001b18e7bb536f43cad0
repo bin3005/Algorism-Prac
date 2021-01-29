@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BinarySearch2805 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int treeNum = in.nextInt();
+		int goal = in.nextInt();
+		int result = 0 ;
+		ArrayList<Integer> treeList = new ArrayList<Integer>();
+		
+		for(int i = 0 ; i < treeNum ; i++) {
+			treeList.add(in.nextInt());
+		}
+		
+		int maxTree = 0;
+		for(int i = 0 ; i < treeList.size(); i++) {
+			if( treeList.get(i) > maxTree) {
+				maxTree = treeList.get(i);
+			}
+		}
+		
+		while(true) {
+			result = 0;
+			for(int i = 0 ; i < treeList.size(); i++) {
+				if(treeList.get(i)- maxTree > 0) {
+					result += treeList.get(i)- maxTree;
+				}
+			}
+			
+			if( result > goal) {
+				break;
+			}
+			maxTree--;
+		}
+		
+		System.out.println(maxTree);
+	}
+
+}

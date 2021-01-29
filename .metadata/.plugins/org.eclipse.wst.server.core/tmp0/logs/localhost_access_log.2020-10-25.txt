@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:16 +0900] "GET /Detamon/index.jsp HTTP/1.1" 200 8429
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:16 +0900] "GET /Detamon/images/logo.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:16 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:18 +0900] "GET /Detamon/controller.do?command=findnearcomform HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:18 +0900] "GET /Detamon/findnearcomform.jsp HTTP/1.1" 200 11706
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:18 +0900] "GET /Detamon/css/findnearcomform.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:25 +0900] "POST /Detamon/controller.do HTTP/1.1" 200 4218
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:25 +0900] "POST /Detamon/controller.do HTTP/1.1" 500 1324
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:25 +0900] "POST /Detamon/controller.do HTTP/1.1" 500 1324
+0:0:0:0:0:0:0:1 - - [25/Oct/2020:18:19:25 +0900] "POST /Detamon/controller.do HTTP/1.1" 200 13294

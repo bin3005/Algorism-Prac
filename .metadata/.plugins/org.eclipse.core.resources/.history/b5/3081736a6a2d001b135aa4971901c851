@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<% response.setContentType("text/html; charset=UTF-8"); %>
+<%@ page import="com.my.dto.MyBoardDto" %>
+<%@ page import="com.my.dao.MyBoardDao" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	a{
+		text-decoration: none;
+		
+	}
+	a:link{color: black;}
+	a:visited{color: black;}
+	/*a:hover{background-color : blue;}*/
+</style>
+</head>
+
+<%	
+	MyBoardDao dao = new MyBoardDao();
+	List<MyBoardDto> list = dao.selectAll();
+	
+%>
+
+<body>
+	<c:set var="formatdate" value="<%=testDate %>"/>
+	<fmt:formatDate value="${formatdate}" pattern="yyyy/MM/dd HH:mm"/>
+	
+	<h1>LIST PAGE</h1>	
+	
+	<table border="1">
+		<col width="50px">
+		<col width="100px">
+		<col width="200px">
+		<col width="100px">
+		
+		<tr>
+			<th>NO</th>
+			<th>NAME</th>
+			<th>TITLE</th>
+			<th>DATE</th>
+			<th>수정</th>
+			<th>삭제</th>
+		</tr>
+<%
+	for(int i = 0; i < list.size(); i++){
+%>
+	<tr>
+		<td><%=list.get(i).getMyNO() %></td>
+		<td><%=list.get(i).getMyName() %></td>
+		 <td><a href="selectone.jsp?myno=<%=list.get(i).getMyNO() %>"><%=list.get(i).getMyTitle() %></a></td>
+		
+		
+		<c:set var="mydate" value="<%=list.get(i).getMyDate() %>"/>
+		<td><fmt:formatDate value="${mydate}" pattern="yyyy/MM/dd HH:mm"/></td>
+
+		
+		<!-- <td onclick="location.href='updatepage.jsp?myno=<%=list.get(i).getMyNO()%>'">수정</td> -->
+		<td ><a href="myupdate.jsp?myno=<%=list.get(i).getMyNO()%>">수정</a></td>
+		<td ><a href="delete.jsp?myno=<%=list.get(i).getMyNO()%>">삭제</a></td>
+	</tr>
+<%
+	}
+%>
+	<tr>
+		<td colspan="6" align="right">
+		<button onclick="location.href='myinsert.jsp'">글쓰기</button>
+		</td>
+	</tr>
+		
+		
+	</table>
+	
+</body>
+</html>
+
+
+
+

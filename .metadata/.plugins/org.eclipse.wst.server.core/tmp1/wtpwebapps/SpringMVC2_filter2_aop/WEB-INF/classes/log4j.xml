@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<!-- 전달받은 메세지를 어디에 출력할 지 결정 -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<!-- 로그를 어떤 형식으로 출력할 지 결정 -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- Application Loggers -->
+	<logger name="com.mvc.upgrade">
+		<level value="info" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+	
+	<!-- 로거 추가 -->
+	<logger name="org.ibatis">
+		<level value="info"></level>
+	</logger>
+	<logger name="java.sql">
+		<level value="info"></level>
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>
+
+<!-- 
+	log4J log level
+	INFO: 정보
+	WARN: 경고, 실행에는 문제가 없지만 향후 에러의 원인이 될 수 있는 경고성 메세지
+	ERROR: 에러, 요청을 처리하는 중 문제가 발생한 상태
+	FATAL: 치명적인 에러
+	TRACE: DEBUG+@ 디버그 레벨이 너무 광범위 한것을 해결하기 위해 상세 이벤트를 나타낸다.
+	
+
+ -->
+
