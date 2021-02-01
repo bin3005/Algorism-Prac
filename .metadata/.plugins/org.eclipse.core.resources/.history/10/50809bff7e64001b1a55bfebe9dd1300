@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Greedy1931 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		ArrayList start = new ArrayList();
+		ArrayList end = new ArrayList();
+		
+		int num = in.nextInt();
+		for(int i = 0 ; i < num; i ++) {
+			start.add(in.nextInt());
+			end.add(in.nextInt());
+		}
+		
+		System.out.println(start);
+		System.out.println(end);
+	}
+
+}

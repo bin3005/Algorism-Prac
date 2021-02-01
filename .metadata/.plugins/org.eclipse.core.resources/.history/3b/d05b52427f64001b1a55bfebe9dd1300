@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Greedy1931 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		ArrayList start = new ArrayList();
+		ArrayList end = new ArrayList();
+		
+		int num = in.nextInt();
+		for(int i = 0 ; i < num; i ++) {
+			start.add(in.nextInt());
+			end.add(in.nextInt());
+		}
+		
+		System.out.println(start);
+		System.out.println(end);
+		
+		HashSet set = new HashSet<>();
+		HashMap map = new HashMap<>();
+		map.valu
+		}
+
+}
+
+class Timetable {
+	int start;
+	int end;
+	public Timetable() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Timetable(int start, int end) {
+		super();
+		this.start = start;
+		this.end = end;
+	}
+	public int getStart() {
+		return start;
+	}
+	public void setStart(int start) {
+		this.start = start;
+	}
+	public int getEnd() {
+		return end;
+	}
+	public void setEnd(int end) {
+		this.end = end;
+	}
+	
+	
+}

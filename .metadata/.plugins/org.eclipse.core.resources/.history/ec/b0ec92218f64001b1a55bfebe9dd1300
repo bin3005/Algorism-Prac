@@ -1,0 +1,126 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Greedy1931 {
+	static int index = 0;
+	static int cnt = 0;
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		
+		Timetable[] timetable = new Timetable[num];
+		
+		for(int i = 0 ; i < num; i ++) {
+			Timetable time = new Timetable(in.nextInt(), in.nextInt());
+			timetable[i] = time;
+		}
+		
+		sort(timetable);
+		firstIndex(timetable);
+		
+		for(int i = 0 ; i < timetable.length; i++) {
+			System.out.println(timetable[i].getStart() +" " + timetable[i].getEnd());
+		}
+		
+		nextIndex(timetable);
+		
+		System.out.println(cnt);
+		
+	}
+	
+	public static void sort(Timetable[] timetable) {
+		for(int i = timetable.length ; i > 0; i--) {
+			for(int j = 0 ; j < i-1 ; j++) {
+				if(timetable[j].getStart() > timetable[j+1].getStart() ) {
+					Timetable tmp = timetable[j];
+					timetable[j] = timetable[j+1];
+					timetable[j+1] = tmp;
+				}
+			}
+		}
+	}
+	
+	public static void firstIndex(Timetable[] timetable) {
+		int time = timetable[0].getEnd() ;
+		
+		for(int i = 1 ; i < timetable.length; i++) {
+			if( time > timetable[i].getEnd()) {
+				time = timetable[i].getEnd();
+				index = i;
+			}
+		}
+		
+		cnt++;
+		
+	}
+	
+	public static boolean nextIndex(Timetable[] timetable) {
+		int num = index;
+		boolean change = false;
+		
+		
+		
+		while( timetable[num].getStart() <= timetable[index].getStart() ) {
+			num++;
+		}
+		int time = timetable[index].getEnd();
+
+		while(num < timetable.length) {
+			if(timetable[num].getEnd() < time) {
+				index = num;
+				change =true;
+			}
+			
+			num++;
+		}
+		
+		if(change == true) {
+			System.out.println("start:" + timetable[index].getStart()+" end: "+ timetable[index].getEnd());
+			cnt++;
+		}
+		
+		return change;
+		
+	}
+	
+	
+
+}
+
+
+class Timetable {
+	int start;
+	int end;
+	public Timetable() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Timetable(int start, int end) {
+		super();
+		this.start = start;
+		this.end = end;
+	}
+	public int getStart() {
+		return start;
+	}
+	public void setStart(int start) {
+		this.start = start;
+	}
+	public int getEnd() {
+		return end;
+	}
+	public void setEnd(int end) {
+		this.end = end;
+	}
+	@Override
+	public String toString() {
+		return "Timetable [start=" + start + ", end=" + end + "]";
+	}
+	
+	
+	
+	
+}
