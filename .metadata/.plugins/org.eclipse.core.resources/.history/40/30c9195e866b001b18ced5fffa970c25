@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Greedy1202 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int cubeNum = in.nextInt();
+		int bagNum = in.nextInt();
+		
+	}
+
+}
+
+class Cume{
+	int weight;
+	int price;
+	public Cume() {
+		super();
+	}
+	public Cume(int weight, int price) {
+		super();
+		this.weight = weight;
+		this.price = price;
+	}
+	
+	
+	
+}

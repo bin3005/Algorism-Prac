@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Greedy1202 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int cubeNum = in.nextInt();
+		int bagNum = in.nextInt();
+		
+	}
+
+}
+
+class Cube implements Comparable<Cube>{
+	int weight;
+	int price;
+	public Cube() {
+		super();
+	}
+	public Cube(int weight, int price) {
+		super();
+		this.weight = weight;
+		this.price = price;
+	}
+	@Override
+	public int compareTo(Cube cube) {
+
+		if(price < cube.price) {
+			return -1;
+		}else {
+			return 1;
+		}
+	}
+	
+	
+	
+}
