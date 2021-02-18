@@ -1,0 +1,17 @@
+
+public class Greedy13305 {
+
+	public static void main(String[] args) {
+
+		
+		
+		2 4 5
+		
+		4 1 6
+	}
+	
+	class Oil{
+		int distance;
+		int price;
+	}
+}

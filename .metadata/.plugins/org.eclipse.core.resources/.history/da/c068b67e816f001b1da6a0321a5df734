@@ -1,0 +1,45 @@
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+public class Greedy10775 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int gateNum = in.nextInt();
+		int airplaneNum = in.nextInt();
+		int[] gate = new int[gateNum];
+		int result = 0;
+		
+		for(int i = 0 ; i < airplaneNum ; i++) {
+			int comeAir = in.nextInt();
+			boolean isDoking = false;
+			if(gate[comeAir-1] == 0) {
+				gate[comeAir-1] = comeAir;
+				result++;
+				isDoking = true;
+			}else {
+				while(comeAir > 0) {
+					if(gate[comeAir-1] == 0) {
+						gate[comeAir-1] = comeAir;
+						result++;
+						isDoking = true;
+						break;
+					}
+					comeAir--;
+				}
+			}
+			System.out.println((i+1)+"번째 실행 --------------");
+			for(int j = 0 ; j < gate.length;j++) {
+				System.out.print("["+gate[j]+"] ");
+			}
+			System.out.println(isDoking +"도킹함?");
+			if(!isDoking) {
+				break;
+			}
+		}
+		
+		System.out.println(result);
+		
+	}
+
+}
