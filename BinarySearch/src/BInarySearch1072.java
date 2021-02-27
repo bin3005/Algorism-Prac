@@ -34,7 +34,7 @@ public class BInarySearch1072 {
 			} else {
 				right = mid - 1;
 			}
-//
+////
 		}
 		if(pre==100) {
 			System.out.println(-1);
